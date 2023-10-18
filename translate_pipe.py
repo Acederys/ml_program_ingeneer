@@ -1,4 +1,4 @@
-from transformers import FSMTForConditionalGeneration, FSMTTokenizer
+from transformers import pipeline
 from natasha import (
     Segmenter,
     MorphVocab,
@@ -13,16 +13,11 @@ from natasha import (
 
     Doc, AddrExtractor, MoneyExtractor, DatesExtractor
 )
+classifier = pipeline('translation','Helsinki-NLP/opus-mt-en-ru')
+Values_list = classifier(input())[0]
+Values = Values_list['translation_text']
 
-#работа с готовой моделью
-mname = "facebook/wmt19-en-ru"
-tokenizer = FSMTTokenizer.from_pretrained(mname)
-model = FSMTForConditionalGeneration.from_pretrained(mname)
 
-input = input()
-input_ids = tokenizer.encode(input, return_tensors="pt")
-outputs = model.generate(input_ids)
-decoded = tokenizer.decode(outputs[0], skip_special_tokens=True)
 
 # работа с бибоиотекой Наташа
 segmenter = Segmenter()
@@ -39,7 +34,7 @@ money_extractor = MoneyExtractor(morph_vocab)
 addr_extractor = AddrExtractor(morph_vocab)
 
 # предаем переведенное предложение в переменную для работы с бибоиотекой
-doc = Doc(decoded)
+doc = Doc(Values)
 
 doc.segment(segmenter)
 doc.tag_morph(morph_tagger)
@@ -71,6 +66,5 @@ for span in doc.spans:
     span.normalize(morph_vocab)
 print(f'Сущности приведены кначальному виду:{doc.spans[:5]}')
 {_.text: _.normal for _ in doc.spans if _.text != _.normal}
-
 
 
