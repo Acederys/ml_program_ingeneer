@@ -2,7 +2,7 @@ import io
 import streamlit as st
 from io import StringIO
 from transformers import pipeline
-st.title('Trxt translator in the Streamlit')
+st.title('Text translator in the Streamlit')
 uploaded_file = st.file_uploader("Select the file.txt you want to translate")
 def load_file():
     if uploaded_file is not None:
