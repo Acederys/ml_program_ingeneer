@@ -1,0 +1,5 @@
+fastapi==0.104.1
+natasha==1.6.0
+pydantic==2.5.2
+streamlit==1.28.0
+transformers==4.34.1
