@@ -39,7 +39,6 @@
 ![Browse file](https://github.com/Acederys/ml_program_ingeneer/raw/master/1.png)
 <p>Отображается содержимое файла и при нажании на кропку <code>TRANSLATE</code> осуществляется передача текста в готовую модель <code>Helsinki-NLP/opus-mt-en-ru</code> (использование через применение pipeline). Отображение результата происходит в <code>.caption</code> ниже.</p>
 ![Перевод](https://github.com/Acederys/ml_program_ingeneer/raw/master/2.png)
-(https://github.com/jon/coolproject/raw/master/image/image.png)
 <h2>Задание 1:</h2>
 <ul>
 <ol>1) Изучите возможности готовых библиотек машинного обучения. </ol>
