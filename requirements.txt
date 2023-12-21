@@ -4,4 +4,7 @@ natasha==1.6.0
 pydantic==2.5.2
 streamlit==1.28.0
 transformers==4.34.1
-torch==2.1.0+cpu
+tensorboard==2.13.0
+tensorboard-data-server==0.7.2
+tensorflow-estimator==2.13.0
+tensorflow-io-gcs-filesystem==0.34.0
