@@ -1,7 +1,5 @@
-# import pytest
 from fastapi.testclient import TestClient
 from API_main import app
-# import httpx
 client = TestClient(app)
 def test_read_main():
     response = client.get("/")
