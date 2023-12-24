@@ -7,7 +7,7 @@
 разработать Web или API приложение машинного обучения и развернуть его в облаке
 
 Приложение реализовано с помощью готовой модели **Helsinki-NLP/opus-mt-en-ru**
-Было реализование приложение с помощью streamlit на платформе streamlit.io  и доступно по ![ссылке](https://appmainpy-mbbh62xrjoaxv9udvsthwj.streamlit.app/)
+Было реализование приложение с помощью streamlit на платформе streamlit.io  и доступно по ссылке : ![ https://appmainpy-mbbh62xrjoaxv9udvsthwj.streamlit.app/)](https://appmainpy-mbbh62xrjoaxv9udvsthwj.streamlit.app/)
 
 ### Использование
 
