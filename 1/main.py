@@ -19,8 +19,10 @@ mname = "facebook/wmt19-en-ru"
 tokenizer = FSMTTokenizer.from_pretrained(mname)
 model = FSMTForConditionalGeneration.from_pretrained(mname)
 
-input = input()
-input_ids = tokenizer.encode(input, return_tensors="pt")
+with open('test_text.txt', 'r', encoding='utf-8') as file:
+    string = file.read()
+
+input_ids = tokenizer.encode(string, return_tensors="pt")
 outputs = model.generate(input_ids)
 decoded = tokenizer.decode(outputs[0], skip_special_tokens=True)
 

@@ -14,7 +14,9 @@ from natasha import (
     Doc, AddrExtractor, MoneyExtractor, DatesExtractor
 )
 classifier = pipeline('translation','Helsinki-NLP/opus-mt-en-ru')
-Values_list = classifier(input())[0]
+with open('test_text.txt', 'r', encoding='utf-8') as file:
+    string = file.read()
+Values_list = classifier(string)[0]
 Values = Values_list['translation_text']
 
 
